@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">GeoNaturaAPP</string>
+
+    <!-- Activity para iniciar app -->
+    <string name="EmpezarApp">Empezar</string>
+</resources>
