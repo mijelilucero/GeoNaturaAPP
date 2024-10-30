@@ -1,6 +1,32 @@
 <resources>
     <string name="app_name">GeoNaturaAPP</string>
 
-    <!-- Activity para iniciar app -->
-    <string name="EmpezarApp">Empezar</string>
+    <!-- Activity iniciar app -->
+    <string name="btnempezarApp">Empezar</string>
+
+    <!-- Activity login -->
+    <string name="bienvenidoLogin">¡Bienvenido!</string>
+    <string name="ingresarDatosLogin">Inicia sesión para registrar y monitorear recursos naturales</string>
+    <string name="btnIniciarSesion">Iniciar Sesión</string>
+    <string name="cambiarARegistrarse">¿Aún no tienes un usuario?</string>
+    <string name="registrarse">Regístrate</string>
+    <string name="campoUser">Usuario</string>
+    <string name="campoPassword">Contraseña</string>
+
+    <!-- Activity sigin -->
+    <string name="tituloRegistrarse">Registrarse</string>
+    <string name="ingresarDatosSignin">Crea una cuenta y monitorea los recursos naturales</string>
+    <string name="campoNombreRegistro">Nombre</string>
+    <string name="campoApellidoRegistro">Apellido</string>
+    <string name="campoUserRegistro">Nombre de usuario</string>
+    <string name="campoPasswordRegistro">Contraseña</string>
+    <string name="campoPasswordConfirm">Confirma tu contraseña</string>
+    <string name="btnCrearNuevaCuenta">Crear cuenta</string>
+
+    <!-- Activity menu principal-->
+    <string name="btnnuevoRegistro">Crear un nuevo registro</string>
+    <string name="btnverRegistros">Ver mis registros</string>
+    <string name="resumenApp">Bienvenido/a a GeoNatura, tu herramienta para registrar y monitorear recursos naturales</string>
+    <string name="invitarUser">¡Comencemos tu aventura en la naturaleza!</string>
+    <string name="preguntaUser">¿Qué te gustaría hacer hoy?</string>
 </resources>
