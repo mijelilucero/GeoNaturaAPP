@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MenuPrincipalActivity extends AppCompatActivity {
 
     private TextView tvSaludo;
-    private Button btnNuevoRegistro, btnVerRegistros;
+    private Button btnVerRegistros, btnCrearRegistro;
     private ImageButton btnMenuPrincipal;
     private String nombre="Mijeli";
 
@@ -30,22 +30,22 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_menu_principal);
 
-        btnNuevoRegistro = findViewById(R.id.btnNuevoRegistro);
+        btnCrearRegistro = findViewById(R.id.btnCrearRegistro);
         btnVerRegistros = findViewById(R.id.btnVerRegistros);
         btnMenuPrincipal = findViewById(R.id.btnMenuPrincipal);
         tvSaludo = findViewById(R.id.tvSaludo);
 
         tvSaludo.setText("¡Hola, "+nombre+"!");
 
-        btnNuevoRegistro.setOnClickListener(v -> {
+        btnCrearRegistro.setOnClickListener(v -> {
             Toast.makeText(this, "Abriendo nuevo registro...", Toast.LENGTH_SHORT).show();
-//            Intent intent = new Intent(this, MenuPrincipalActivity.class);
-//            startActivity(intent);
+            Intent intent = new Intent(this, CamaraNuevoRegistroActivity.class);
+            startActivity(intent);
         });
 
         btnVerRegistros.setOnClickListener(v -> {
             Toast.makeText(this, "Abriendo los registros...", Toast.LENGTH_SHORT).show();
-//            Intent intent = new Intent(this, MenuPrincipalActivity.class);
+//            Intent intent = new Intent(this, CamaraNuevoRegistroActivity.class);
 //            startActivity(intent);
         });
 

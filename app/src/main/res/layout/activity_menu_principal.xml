@@ -52,7 +52,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNuevoRegistro" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCrearRegistro" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -67,16 +67,19 @@
         app:srcCompat="@drawable/logoblanco" />
 
     <Button
-        android:id="@+id/btnNuevoRegistro"
+        android:id="@+id/btnCrearRegistro"
         android:layout_width="258dp"
         android:layout_height="72dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:backgroundTint="@color/officeGreen"
         android:text="@string/btnnuevoRegistro"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
 
     <TextView
         android:id="@+id/tvSaludo"
