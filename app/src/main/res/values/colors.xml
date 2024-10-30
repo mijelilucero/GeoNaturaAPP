@@ -6,4 +6,6 @@
     <color name="officeGreen">#007200</color>
     <color name="PakistanGreen">#104911</color>
     <color name="BlackOlive">#333d29</color>
+    <color name="Gray">#B6B6B6</color>
+    <color name="AntiFlashWhite">#EBEBEB</color>
 </resources>
