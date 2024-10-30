@@ -39,8 +39,8 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
         btnNuevoRegistro.setOnClickListener(v -> {
             Toast.makeText(this, "Abriendo nuevo registro...", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, CamaraNuevoRegistroActivity.class);
-            startActivity(intent);
+//            Intent intent = new Intent(this, MenuPrincipalActivity.class);
+//            startActivity(intent);
         });
 
         btnVerRegistros.setOnClickListener(v -> {
