@@ -13,6 +13,30 @@
         android:theme="@style/Theme.GeoNaturaAPP"
         tools:targetApi="31">
         <activity
+            android:name=".FichaTecnicaCaracEntornoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FichaTecnicaFaunaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FichaTecnicaFloraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SeleccionarNuevoRegistroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UbicacionNuevoRegistroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CamaraNuevoRegistroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SigninActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuPrincipalActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity

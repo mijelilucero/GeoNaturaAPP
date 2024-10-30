@@ -1,6 +1,81 @@
 <resources>
     <string name="app_name">GeoNaturaAPP</string>
 
-    <!-- Activity para iniciar app -->
-    <string name="EmpezarApp">Empezar</string>
+    <!-- Activity iniciar app -->
+    <string name="btnempezarApp">Empezar</string>
+
+    <!-- Activity login -->
+    <string name="bienvenidoLogin">¡Bienvenido!</string>
+    <string name="ingresarDatosLogin">Inicia sesión para registrar y monitorear recursos naturales</string>
+    <string name="btnIniciarSesion">Iniciar Sesión</string>
+    <string name="cambiarARegistrarse">¿Aún no tienes un usuario?</string>
+    <string name="registrarse">Regístrate</string>
+    <string name="campoUser">Usuario</string>
+    <string name="campoPassword">Contraseña</string>
+
+    <!-- Activity sigin -->
+    <string name="tituloRegistrarse">Registrarse</string>
+    <string name="ingresarDatosSignin">Crea una cuenta y monitorea los recursos naturales</string>
+    <string name="campoNombreRegistro">Nombre</string>
+    <string name="campoApellidoRegistro">Apellido</string>
+    <string name="campoUserRegistro">Nombre de usuario</string>
+    <string name="campoPasswordRegistro">Contraseña</string>
+    <string name="campoPasswordConfirm">Confirma tu contraseña</string>
+    <string name="btnCrearNuevaCuenta">Crear cuenta</string>
+
+    <!-- Activity menu principal-->
+    <string name="btnnuevoRegistro">Crear un nuevo registro</string>
+    <string name="btnverRegistros">Ver mis registros</string>
+    <string name="resumenApp">Bienvenido/a a GeoNatura, tu herramienta para registrar y monitorear recursos naturales</string>
+    <string name="invitarUser">¡Comencemos tu aventura en la naturaleza!</string>
+    <string name="preguntaUser">¿Qué te gustaría hacer hoy?</string>
+
+    <!-- Activity nuevo registro Camara-->
+    <string name="tituloNuevoRegistro">Nuevo Recurso</string>
+    <string name="pasoUno">PASO 1:</string>
+    <string name="indicacionesFoto">Captura una imagen del recurso natural</string>
+    <string name="btnTomarFotografia">Tomar fotografía</string>
+    <string name="btnSiguientePaso">Siguiente Paso</string>
+
+    <!-- Activity nuevo registro Ubicacion-->
+    <string name="pasoDos">PASO 2:</string>
+    <string name="indicacionesUbicacion">Determina tu ubicación actual</string>
+    <string name="btnObtenerUbicacion">Obtener Ubicación</string>
+
+    <!-- Activity nuevo registro seleccion-->
+    <string name="pasoTres">PASO 3:</string>
+    <string name="indicacionesSeleccion">Elige el tipo de recurso natural</string>
+    <string name="btnFlora">Flora</string>
+    <string name="btnFauna">Fauna</string>
+    <string name="btnCaracEntorno">Características del entorno</string>
+
+    <!-- Activity nuevo registro ficha tecnica de flora-->
+    <string name="pasoCuatro">PASO 4:</string>
+    <string name="indicacionesFichaTecnica">Completa la ficha técnica del recurso seleccionado</string>
+    <string name="btnguardarRegistro">Guardar Registro</string>
+    <string name="tvNombreComun">Nombre Común:</string>
+    <string name="tvNombreCientifico">Nombre Científico:</string>
+    <string name="tvTipoPLanta">Tipo de Planta:</string>
+    <string name="tvAltura">Altura:</string>
+    <string name="tvFruto">Fruto:</string>
+
+    <string name="tvEstadoConservacion">Estado de Conservación:</string>
+
+    <string name="promptSpinner">Selecciona</string>
+    <string-array name="spinnerEstadoConservacion">
+        <item>Elige uno</item>
+        <item>Peligro</item>
+        <item>Vulnerable</item>
+        <item>Sin Preocupación</item>
+    </string-array>
+
+    <!-- Activity nuevo registro ficha tecnica de fauna-->
+    <string name="tvNombre">Nombre:</string>
+    <string name="tvClasificacion">Clasificación:</string>
+    <string name="tvTamanioo">Tamaño Aprox:</string>
+    <string name="tvPeso">Peso Aprox:</string>
+    <string name="tvHabitat">Habitat:</string>
+
+
+
 </resources>
