@@ -74,8 +74,35 @@
     <string name="tvPeso">Peso Aprox:</string>
     <string name="tvHabitat">Habitat:</string>
 
+    <!-- Activity nuevo registro ficha tecnica de caracteristicas del entorno-->
+    <string name="tvEcosistema">Ecosistema:</string>
+    <string name="tvTemperatura">Temperatura:</string>
+    <string name="tvAltitud">Altitud:</string>
+    <string name="tvPresenciaDeAgua">Presencia de cuerpos de agua:</string>
+    <string name="tvDensidadVegetal">Nivel de densidad vegetal:</string>s
 
+    <string-array name="spinnerPresenciaAgua">
+        <item>Elige uno</item>
+        <item>Río</item>
+        <item>Lago</item>
+        <item>Arroyo</item>
+        <item>Laguna</item>
+        <item>Sin presencia</item>
+    </string-array>
 
+    <string-array name="spinnerDensidadVegetal">
+        <item>Elige uno</item>
+        <item>Denso</item>
+        <item>Disperso</item>
+        <item>Sin vegetación</item>
+    </string-array>
+
+    <!-- Activity seleccion de ver registros-->
+    <string name="tituloVerRegistros">Ver Registros</string>
+    <string name="indicacionesSeleccionVerRegistros">Elige de que tipo de recurso natural deseas ver tus registros</string>
+
+    <!-- Activity para ver los registros de cada tipo-->
+    <string name="indicacionesMostrandoRegistros">Tus registros sobre el recurso natural seleccionado son:</string>
 
 
 </resources>

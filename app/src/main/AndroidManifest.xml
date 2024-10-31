@@ -13,6 +13,12 @@
         android:theme="@style/Theme.GeoNaturaAPP"
         tools:targetApi="31">
         <activity
+            android:name=".MostrarRegistrosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SeleccionarVerRegistros"
+            android:exported="false" />
+        <activity
             android:name=".SigninActivity"
             android:exported="false" />
         <activity
@@ -29,16 +35,16 @@
             android:exported="false" />
         <activity
             android:name=".SeleccionarNuevoRegistroActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".FichaTecnicaFloraActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".FichaTecnicaFaunaActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".FichaTecnicaCaracEntornoActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -48,7 +54,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

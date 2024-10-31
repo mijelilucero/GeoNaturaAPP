@@ -12,7 +12,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class SeleccionarNuevoRegistroActivity extends AppCompatActivity {
+public class SeleccionarVerRegistros extends AppCompatActivity {
 
     Button btnFlora, btnFauna, btnCaracEntorno;
     private ImageButton btnMenuPrincipal;
@@ -21,7 +21,7 @@ public class SeleccionarNuevoRegistroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_seleccionar_nuevo_registro);
+        setContentView(R.layout.activity_seleccionar_ver_registros);
 
         btnFlora = findViewById(R.id.btnFlora);
         btnFauna = findViewById(R.id.btnFauna);
