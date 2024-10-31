@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgnuevoregistro"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
     tools:context=".UbicacionNuevoRegistroActivity">
 
     <TextView
@@ -134,16 +135,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.367" />
 
-    <ImageView
-        android:id="@+id/imageView8"
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="249dp"
         android:layout_height="235dp"
-        android:background="@color/Gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.614" />
+        app:layout_constraintVertical_bias="0.601"
+        map:cameraZoom="10"
+        map:uiRotateGestures="true"
+        map:uiZoomControls="true" />
 
     <Button
         android:id="@+id/btnSiguientePasoElegirRecurso"

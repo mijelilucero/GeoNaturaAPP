@@ -47,9 +47,7 @@ public class SeleccionarNuevoRegistroActivity extends AppCompatActivity {
         });
 
         btnMenuPrincipal.setOnClickListener(v -> {
-            Toast.makeText(this, "Volviendo al menu principal...", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, MenuPrincipalActivity.class);
-            startActivity(intent);
+            Toast.makeText(this, "Termina de registrar el nuevo recurso...", Toast.LENGTH_SHORT).show();
         });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

@@ -22,8 +22,7 @@ public class FloraDao {
     }
 
     public void insertFlora(Flora flora) {
-        SQLiteDatabase database = dbHelper.getWritableDatabase();
-        try {
+        try (SQLiteDatabase database = dbHelper.getWritableDatabase()) {
             ContentValues values = new ContentValues();
             values.put("latitud", flora.getLatitud());
             values.put("longitud", flora.getLongitud());
@@ -38,14 +37,11 @@ public class FloraDao {
             values.put("id_user", flora.getIdUser());
 
             database.insert(DBHelper.TABLE_FLORA, null, values);
-        } finally {
-            database.close();
         }
     }
 
     public void updateFlora(Flora flora) {
-        SQLiteDatabase database = dbHelper.getWritableDatabase();
-        try {
+        try (SQLiteDatabase database = dbHelper.getWritableDatabase()) {
             ContentValues values = new ContentValues();
             values.put("latitud", flora.getLatitud());
             values.put("longitud", flora.getLongitud());
@@ -63,19 +59,14 @@ public class FloraDao {
             String[] whereArgs = {String.valueOf(flora.getId())};
 
             database.update(DBHelper.TABLE_FLORA, values, whereClause, whereArgs);
-        } finally {
-            database.close();
         }
     }
 
     public void deleteFloraById(int id) {
-        SQLiteDatabase database = dbHelper.getWritableDatabase();
-        try {
+        try (SQLiteDatabase database = dbHelper.getWritableDatabase()) {
             String whereClause = "id = ?";
             String[] whereArgs = {String.valueOf(id)};
             database.delete(DBHelper.TABLE_FLORA, whereClause, whereArgs);
-        } finally {
-            database.close();
         }
     }
 
@@ -109,12 +100,11 @@ public class FloraDao {
     }
 
     public List<Flora> getAllFloraByIdUser(int idUser) {
-        int idUserActual = idUser;
         List<Flora> floraList = new ArrayList<>();
         SQLiteDatabase database = dbHelper.getReadableDatabase();
 
         String query = "SELECT * FROM tb_flora WHERE id_user = ?";
-        String[] selectionArgs = {String.valueOf(idUserActual)};
+        String[] selectionArgs = {String.valueOf(idUser)};
 
         try (Cursor cursor = database.rawQuery(query, null)) {
             if (cursor.moveToFirst()) {

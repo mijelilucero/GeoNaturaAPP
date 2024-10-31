@@ -105,10 +105,10 @@
         app:layout_constraintVertical_bias="0.367" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/imgVerFoto"
         android:layout_width="281dp"
         android:layout_height="291dp"
-        android:background="@color/Gray"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.535"
