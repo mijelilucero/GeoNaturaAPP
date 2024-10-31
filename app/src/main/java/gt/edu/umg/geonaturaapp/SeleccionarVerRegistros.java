@@ -30,20 +30,20 @@ public class SeleccionarVerRegistros extends AppCompatActivity {
 
         btnFlora.setOnClickListener(v -> {
             Toast.makeText(this, "Abriendo flora...", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, FichaTecnicaFloraActivity.class);
-            startActivity(intent);
+//            Intent intent = new Intent(this, FichaTecnicaFloraActivity.class);
+//            startActivity(intent);
         });
 
         btnFauna.setOnClickListener(v -> {
             Toast.makeText(this, "Abriendo fauna...", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, FichaTecnicaFaunaActivity.class);
-            startActivity(intent);
+//            Intent intent = new Intent(this, FichaTecnicaFaunaActivity.class);
+//            startActivity(intent);
         });
 
         btnCaracEntorno.setOnClickListener(v -> {
             Toast.makeText(this, "Abriendo características del entorno...", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, FichaTecnicaCaracEntornoActivity.class);
-            startActivity(intent);
+//            Intent intent = new Intent(this, FichaTecnicaCaracEntornoActivity.class);
+//            startActivity(intent);
         });
 
         btnMenuPrincipal.setOnClickListener(v -> {

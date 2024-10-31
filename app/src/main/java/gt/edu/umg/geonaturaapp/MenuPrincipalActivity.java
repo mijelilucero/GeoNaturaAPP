@@ -2,6 +2,7 @@ package gt.edu.umg.geonaturaapp;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -18,10 +19,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
     private TextView tvSaludo;
     private Button btnVerRegistros, btnCrearRegistro;
-    private ImageButton btnMenuPrincipal;
-    private String nombre="Mijeli";
-
-
+    private ImageButton btnMenuPrincipal, btnCerrarSesion;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -33,9 +31,13 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         btnCrearRegistro = findViewById(R.id.btnCrearRegistro);
         btnVerRegistros = findViewById(R.id.btnVerRegistros);
         btnMenuPrincipal = findViewById(R.id.btnMenuPrincipal);
+        btnCerrarSesion = findViewById(R.id.btnCerrarSesion);
         tvSaludo = findViewById(R.id.tvSaludo);
 
-        tvSaludo.setText("¡Hola, "+nombre+"!");
+        SharedPreferences sharedPreferences = getSharedPreferences("MiAppPreferences", MODE_PRIVATE);
+        String nombreUsuario = sharedPreferences.getString("nombreUsuario", "");
+
+        tvSaludo.setText("¡Hola, "+nombreUsuario+"!");
 
         btnCrearRegistro.setOnClickListener(v -> {
             Toast.makeText(this, "Abriendo nuevo registro...", Toast.LENGTH_SHORT).show();
@@ -52,6 +54,17 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         btnMenuPrincipal.setOnClickListener(v -> {
             Toast.makeText(this, "Volviendo al menu principal...", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, MenuPrincipalActivity.class);
+            startActivity(intent);
+        });
+
+        btnCerrarSesion.setOnClickListener(v -> {
+            Toast.makeText(this, "Cerrando sesión...", Toast.LENGTH_SHORT).show();
+
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.clear();
+            editor.apply();
+
+            Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         });
 
