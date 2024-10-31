@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/AppleGreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaHora"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <TextView
+        android:id="@+id/txtFechaHora"
+        android:layout_width="174dp"
+        android:layout_height="23dp"
+        android:fontFamily="sans-serif-light"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/BlackOlive"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFoto"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <TextView
+        android:id="@+id/txtFruto"
+        android:layout_width="225dp"
+        android:layout_height="21dp"
+        android:fontFamily="sans-serif-light"
+        android:text=""
+        android:textColor="@color/BlackOlive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAltura" />
+
+    <TextView
+        android:id="@+id/txtNombreComun"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:fontFamily="sans-serif-black"
+        android:text=""
+        android:textColor="@color/PakistanGreen"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="55dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="14dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/txtLatitud"
+        android:textColor="@color/BlackOlive"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEstadoConservacion"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="55dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="14dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/txtLongitud"
+        android:textColor="@color/BlackOlive"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEstadoConservacion"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <TextView
+        android:id="@+id/txtNombreCientifico"
+        android:layout_width="225dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="sans-serif-light"
+        android:text=""
+        android:textColor="@color/BlackOlive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTipoPlanta"
+        android:layout_width="225dp"
+        android:layout_height="21dp"
+        android:fontFamily="sans-serif-light"
+        android:text=""
+        android:textColor="@color/BlackOlive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreCientifico" />
+
+    <TextView
+        android:id="@+id/txtAltura"
+        android:layout_width="225dp"
+        android:layout_height="21dp"
+        android:fontFamily="sans-serif-light"
+        android:text=""
+        android:textColor="@color/BlackOlive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTipoPlanta" />
+
+    <TextView
+        android:id="@+id/txtLatitud"
+        android:layout_width="161dp"
+        android:layout_height="18dp"
+        android:fontFamily="sans-serif-light"
+        android:text=""
+        android:textColor="@color/BlackOlive"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEstadoConservacion"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <TextView
+        android:id="@+id/txtLongitud"
+        android:layout_width="161dp"
+        android:layout_height="18dp"
+        android:fontFamily="sans-serif-light"
+        android:text=""
+        android:textColor="@color/BlackOlive"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLatitud"
+        app:layout_constraintVertical_bias="0.007" />
+
+    <TextView
+        android:id="@+id/txtEstadoConservacion"
+        android:layout_width="225dp"
+        android:layout_height="21dp"
+        android:fontFamily="sans-serif-medium"
+        android:text=""
+        android:textColor="@color/PakistanGreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageViewFoto"
+        app:layout_constraintTop_toBottomOf="@+id/txtFruto"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageViewFoto"
+        android:layout_width="173dp"
+        android:layout_height="212dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

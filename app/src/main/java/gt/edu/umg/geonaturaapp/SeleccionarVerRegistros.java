@@ -29,9 +29,9 @@ public class SeleccionarVerRegistros extends AppCompatActivity {
         btnMenuPrincipal = findViewById(R.id.btnMenuPrincipal);
 
         btnFlora.setOnClickListener(v -> {
-            Toast.makeText(this, "Abriendo flora...", Toast.LENGTH_SHORT).show();
-//            Intent intent = new Intent(this, FichaTecnicaFloraActivity.class);
-//            startActivity(intent);
+            Toast.makeText(this, "Abriendo registros flora...", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, MostrarRegistrosFloraActivity.class);
+            startActivity(intent);
         });
 
         btnFauna.setOnClickListener(v -> {

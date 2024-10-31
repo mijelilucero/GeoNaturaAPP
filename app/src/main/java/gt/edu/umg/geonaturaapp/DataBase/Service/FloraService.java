@@ -2,6 +2,7 @@ package gt.edu.umg.geonaturaapp.DataBase.Service;
 
 import android.content.Context;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import gt.edu.umg.geonaturaapp.DataBase.Dao.FloraDao;
@@ -31,7 +32,7 @@ public class FloraService {
         return floraDao.getFloraById(id);
     }
 
-    public List<Flora> getAllFloras(int userId) {
+    public ArrayList<Flora> getAllFloras(int userId) {
         return floraDao.getAllFloraByIdUser(userId);
     }
 }

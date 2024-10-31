@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -99,14 +100,14 @@ public class FloraDao {
         return flora;
     }
 
-    public List<Flora> getAllFloraByIdUser(int idUser) {
-        List<Flora> floraList = new ArrayList<>();
+    public ArrayList<Flora> getAllFloraByIdUser(int idUser) {
+        ArrayList<Flora> floraList = new ArrayList<>();
         SQLiteDatabase database = dbHelper.getReadableDatabase();
 
         String query = "SELECT * FROM tb_flora WHERE id_user = ?";
         String[] selectionArgs = {String.valueOf(idUser)};
 
-        try (Cursor cursor = database.rawQuery(query, null)) {
+        try (Cursor cursor = database.rawQuery(query, selectionArgs)) {
             if (cursor.moveToFirst()) {
                 do {
                     Flora flora = new Flora();
@@ -129,6 +130,8 @@ public class FloraDao {
         } finally {
             database.close();
         }
+
+        Log.d("FloraService", "Mijeli: Número de floras encontradas: " + floraList.size());
 
         return floraList;
     }

@@ -102,7 +102,12 @@
     <string name="indicacionesSeleccionVerRegistros">Elige de que tipo de recurso natural deseas ver tus registros</string>
 
     <!-- Activity para ver los registros de cada tipo-->
+    <string name="tituloVerRegistrosFlora">Registros Flora</string>
     <string name="indicacionesMostrandoRegistros">Tus registros sobre el recurso natural seleccionado son:</string>
+    <string name="tituloVerRegistrosFauna">Registros Fauna</string>
+    <string name="tituloVerRegistrosCaracteristicasEntorno">Registros Características del Entorno</string>
+    <string name="txtLatitud">Latitud:</string>
+    <string name="txtLongitud">Longitud:</string>
 
 
 </resources>
