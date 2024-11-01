@@ -2,6 +2,7 @@ package gt.edu.umg.geonaturaapp.DataBase.Service;
 
 import android.content.Context;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import gt.edu.umg.geonaturaapp.DataBase.Dao.FaunaDao;
@@ -31,7 +32,7 @@ public class FaunaService {
         return faunaDao.getFaunaById(id);
     }
 
-    public List<Fauna> getAllFaunas(int userId) {
+    public ArrayList<Fauna> getAllFaunas(int userId) {
         return faunaDao.getAllFaunaByIdUser(userId);
     }
 }

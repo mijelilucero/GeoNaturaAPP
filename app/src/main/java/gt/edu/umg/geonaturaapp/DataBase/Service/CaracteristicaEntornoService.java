@@ -2,6 +2,7 @@ package gt.edu.umg.geonaturaapp.DataBase.Service;
 
 import android.content.Context;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import gt.edu.umg.geonaturaapp.DataBase.Dao.CaracteristicasEntornoDao;
@@ -31,7 +32,7 @@ public class CaracteristicaEntornoService {
         return caracteristicasEntornoDao.getCaracteristicaEntornoById(id);
     }
 
-    public List<CaracteristicaEntorno> getAllCaracteristicasEntorno(int userId) {
+    public ArrayList<CaracteristicaEntorno> getAllCaracteristicasEntorno(int userId) {
         return caracteristicasEntornoDao.getAllCaracteristicasEntornoByIdUser(userId);
     }
 }

@@ -55,7 +55,7 @@
 
 
         <TextView
-            android:id="@+id/txtNombreComun"
+            android:id="@+id/txtNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/PakistanGreen"
@@ -70,7 +70,7 @@
             android:text=""/>
 
         <TextView
-            android:id="@+id/txtNombreCientifico"
+            android:id="@+id/txtClasificacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
@@ -80,7 +80,7 @@
             />
 
         <TextView
-            android:id="@+id/txtTipoPlanta"
+            android:id="@+id/txtTamanio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
@@ -89,7 +89,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/txtAltura"
+            android:id="@+id/txtPeso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
@@ -98,7 +98,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/txtFruto"
+            android:id="@+id/txtHabitat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"

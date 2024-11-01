@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -106,8 +107,8 @@ public class CaracteristicasEntornoDao {
         return caracteristicaEntorno;
     }
 
-    public List<CaracteristicaEntorno> getAllCaracteristicasEntornoByIdUser(int idUser) {
-        List<CaracteristicaEntorno> caracteristicaEntornoList = new ArrayList<>();
+    public ArrayList<CaracteristicaEntorno> getAllCaracteristicasEntornoByIdUser(int idUser) {
+        ArrayList<CaracteristicaEntorno> caracteristicaEntornoList = new ArrayList<>();
         SQLiteDatabase database = dbHelper.getReadableDatabase();
 
         String query = "SELECT * FROM tb_caracteristicasEntorno WHERE id_user = ?";
@@ -137,6 +138,7 @@ public class CaracteristicasEntornoDao {
             database.close();
         }
 
+        Log.d("FloraService", "Mijeli: Número de floras encontradas: " + caracteristicaEntornoList.size());
         return caracteristicaEntornoList;
     }
 

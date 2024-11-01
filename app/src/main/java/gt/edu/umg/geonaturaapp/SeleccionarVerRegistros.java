@@ -35,15 +35,15 @@ public class SeleccionarVerRegistros extends AppCompatActivity {
         });
 
         btnFauna.setOnClickListener(v -> {
-            Toast.makeText(this, "Abriendo fauna...", Toast.LENGTH_SHORT).show();
-//            Intent intent = new Intent(this, FichaTecnicaFaunaActivity.class);
-//            startActivity(intent);
+            Toast.makeText(this, "Abriendo registros fauna...", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, MostrarRegistrosFaunaActivity.class);
+            startActivity(intent);
         });
 
         btnCaracEntorno.setOnClickListener(v -> {
-            Toast.makeText(this, "Abriendo características del entorno...", Toast.LENGTH_SHORT).show();
-//            Intent intent = new Intent(this, FichaTecnicaCaracEntornoActivity.class);
-//            startActivity(intent);
+            Toast.makeText(this, "Abriendo registros caracteristicas del entorno...", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, MostrarRegistrosCaracEntornoActivity.class);
+            startActivity(intent);
         });
 
         btnMenuPrincipal.setOnClickListener(v -> {

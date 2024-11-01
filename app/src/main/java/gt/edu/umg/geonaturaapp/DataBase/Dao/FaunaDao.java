@@ -106,8 +106,8 @@ public class FaunaDao {
         return fauna;
     }
 
-    public List<Fauna> getAllFaunaByIdUser(int idUser) {
-        List<Fauna> faunaList = new ArrayList<>();
+    public ArrayList<Fauna> getAllFaunaByIdUser(int idUser) {
+        ArrayList<Fauna> faunaList = new ArrayList<>();
         SQLiteDatabase database = dbHelper.getReadableDatabase();
 
         String query = "SELECT * FROM tb_fauna WHERE id_user = ?";

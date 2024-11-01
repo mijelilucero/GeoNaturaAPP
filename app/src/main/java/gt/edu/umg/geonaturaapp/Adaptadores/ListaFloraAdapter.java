@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import gt.edu.umg.geonaturaapp.DataBase.Model.Fauna;
+
 import gt.edu.umg.geonaturaapp.DataBase.Model.Flora;
 import gt.edu.umg.geonaturaapp.R;
 
