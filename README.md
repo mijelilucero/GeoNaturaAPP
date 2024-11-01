@@ -11,4 +11,4 @@ Inicio de sesión,
 Captura y Almacenamiento de Fotografías,
 Geolocalización de Recursos Naturales,
 Ficha Técnica de Especímenes y Elementos Naturales,
-Interfaz de Consulta
+Interfaz de Consulta.
