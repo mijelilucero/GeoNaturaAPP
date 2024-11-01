@@ -130,8 +130,7 @@ public class FloraDao {
         } finally {
             database.close();
         }
-
-        Log.d("FloraService", "Mijeli: Número de floras encontradas: " + floraList.size());
+        
 
         return floraList;
     }

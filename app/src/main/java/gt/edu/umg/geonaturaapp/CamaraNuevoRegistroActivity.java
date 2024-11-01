@@ -66,7 +66,7 @@ public class CamaraNuevoRegistroActivity extends AppCompatActivity {
 
         btnSiguientePasoUbicacion.setOnClickListener(v -> {
             if(imageViewVerFoto.getDrawable() != null){
-                Toast.makeText(this, "Obteniendo ubicación...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Abriendo obtener ubicación...", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, UbicacionNuevoRegistroActivity.class);
                 startActivity(intent);
             }else{
@@ -224,6 +224,6 @@ public class CamaraNuevoRegistroActivity extends AppCompatActivity {
         editor.putString("imagen_key", imagenBase64);
         editor.apply();
 
-        Log.d("Registro", "Mijeli: imagen guardada, longitud: " + imagenBase64.length());
+        Log.d("Registro", "Mensaje: imagen guardada, longitud: " + imagenBase64.length());
     }
 }

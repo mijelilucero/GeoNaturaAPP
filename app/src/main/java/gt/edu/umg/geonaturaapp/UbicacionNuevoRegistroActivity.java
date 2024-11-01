@@ -144,8 +144,7 @@ public class UbicacionNuevoRegistroActivity extends AppCompatActivity implements
         editor.putFloat("longitud", (float) longitud);
         editor.apply();
 
-        Log.d("Registro", "Mijeli: latitud: " + (float) latitud);
-        Log.d("Registro", "Mijeli: longitud: " + (float) longitud);
-        Log.d("Registro", "Mijeli: Guardado correctamente");
+        Log.d("Registro", "Mensaje: latitud: " + (float) latitud);
+        Log.d("Registro", "Mensaje: longitud: " + (float) longitud);
     }
 }

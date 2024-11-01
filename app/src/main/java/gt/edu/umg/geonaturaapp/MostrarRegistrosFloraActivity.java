@@ -45,7 +45,7 @@ public class MostrarRegistrosFloraActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("MiAppPreferences", MODE_PRIVATE);
         int idUsuario = sharedPreferences.getInt("idUsuario", -1);
 
-        Log.d("Registro", "Mijeli: id usuario actual: " + idUsuario);
+        Log.d("Registro", "Mensaje: id usuario actual: " + idUsuario);
 
         ListaFloraAdapter adapterFlora = new ListaFloraAdapter(floraService.getAllFloras(idUsuario));
 

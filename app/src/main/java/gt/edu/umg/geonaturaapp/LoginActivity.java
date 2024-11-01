@@ -41,9 +41,6 @@ public class LoginActivity extends AppCompatActivity {
             currentUserName = txtUser.getText().toString().trim();
             currentPassword= txtPassword.getText().toString().trim();
             iniciarSesion(currentUserName,currentPassword);
-
-            Intent intent = new Intent(this, MenuPrincipalActivity.class);
-            startActivity(intent);
         });
 
         btnRegistarse.setOnClickListener(v -> {

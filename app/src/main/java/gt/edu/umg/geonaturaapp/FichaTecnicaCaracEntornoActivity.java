@@ -64,7 +64,6 @@ public class FichaTecnicaCaracEntornoActivity extends AppCompatActivity {
                 if (position == 0) {
                     ((TextView) view).setTextColor(Color.GRAY);
                 } else {
-                    // Lógica para manejar las selecciones válidas
                     ((TextView) view).setTextColor(Color.BLACK);
                 }
             }
@@ -85,7 +84,6 @@ public class FichaTecnicaCaracEntornoActivity extends AppCompatActivity {
                 if (position == 0) {
                     ((TextView) view).setTextColor(Color.GRAY);
                 } else {
-                    // Lógica para manejar las selecciones válidas
                     ((TextView) view).setTextColor(Color.BLACK);
                 }
             }
@@ -105,7 +103,6 @@ public class FichaTecnicaCaracEntornoActivity extends AppCompatActivity {
                     double temperatura = Double.parseDouble(txtTemperatura.getText().toString());
                     double altitud = Double.parseDouble(txtAltitud.getText().toString());
 
-                    Log.d("Registro", "Mijeli: sacando datos de sharedpreferences");
                     SharedPreferences sharedPreferences = getSharedPreferences("MiAppPreferences", MODE_PRIVATE);
                     float latitudFloat = sharedPreferences.getFloat("latitud", 0.00f);
                     float longitudFloat = sharedPreferences.getFloat("longitud", 0.00f);
@@ -113,13 +110,11 @@ public class FichaTecnicaCaracEntornoActivity extends AppCompatActivity {
                     double latitud = (double) latitudFloat;
                     double longitud = (double) longitudFloat;
 
-                    Log.d("Registro", "Mijeli: latitud y longitud: "+latitud+longitud);
-
                     int idUsuario = sharedPreferences.getInt("idUsuario", -1);
 
-                    Log.d("Registro", "Mijeli: Latitud:"+latitud);
-                    Log.d("Registro", "Mijeli: Longitud:"+longitud);
-                    Log.d("Registro", "Mijeli: IdUser:"+idUsuario);
+                    Log.d("Registro", "Mensaje: Latitud:"+latitud);
+                    Log.d("Registro", "Mensaje: Longitud:"+longitud);
+                    Log.d("Registro", "Mensaje: IdUser:"+idUsuario);
 
                     String imagenBase64 = sharedPreferences.getString("imagen_key", null);
                     byte[] imagenBytes = null;
@@ -127,16 +122,16 @@ public class FichaTecnicaCaracEntornoActivity extends AppCompatActivity {
                     if (imagenBase64 != null) {
                         try {
                             imagenBytes = Base64.decode(imagenBase64, Base64.DEFAULT);
-                            Log.d("Registro", "Mijeli: Imagen decodificada correctamente, longitud de bytes: " + imagenBytes.length);
+                            Log.d("Registro", "Mensaje: Imagen decodificada correctamente, longitud de bytes: " + imagenBytes.length);
                         } catch (IllegalArgumentException e) {
-                            Log.e("Registro", "Mijeli:Error al decodificar la imagen Base64: " + e.getMessage());
+                            Log.e("Registro", "Mensaje: Error al decodificar la imagen Base64: " + e.getMessage());
                         }
                     } else {
-                        Log.w("Registro", "Mijeli: No se encontró imagen en SharedPreferences.");
+                        Log.w("Registro", "Mensaje: No se encontró imagen en SharedPreferences.");
                     }
 
                     String fechaHora = obtenerFechaHoraActual();
-                    Log.d("Registro", "Mijeli: fecha y hora: "+fechaHora);
+                    Log.d("Registro", "Mensaje:: fecha y hora: "+fechaHora);
 
 
                     CaracteristicaEntorno caracteristicaEntornoDatos = new CaracteristicaEntorno();
@@ -172,11 +167,11 @@ public class FichaTecnicaCaracEntornoActivity extends AppCompatActivity {
 
     private void guardarregistroCaracteristicasEntorno(CaracteristicaEntorno caracteristicaEntorno) {
         CaracteristicaEntornoService caracteristicaEntornoService = new CaracteristicaEntornoService(this);
-        Log.d("Registro", "Mijeli: Intentando guardar el registro...");
+        Log.d("Registro", "Mensaje: Intentando guardar el registro...");
 
         try {
             caracteristicaEntornoService.addCaracteristicaEntorno(caracteristicaEntorno);
-            Log.d("Registro", "Mijeli: Registro guardado en la base de datos");
+            Log.d("Registro", "Mensaje: Registro guardado en la base de datos");
 
             Toast.makeText(this, "Registro guardado exitosamente...", Toast.LENGTH_SHORT).show();
 
@@ -189,10 +184,9 @@ public class FichaTecnicaCaracEntornoActivity extends AppCompatActivity {
 
             Intent intent = new Intent(this, MenuPrincipalActivity.class);
             startActivity(intent);
-            Log.d("Registro", "Mijeli: Cambio de actividad a MenuPrincipalActivity");
         } catch (Exception e) {
             Toast.makeText(this, "Error al guardar el registro: " + e.getMessage(), Toast.LENGTH_LONG).show();
-            Log.e("Registro", "Mijeli: Error al guardar el registro:", e);
+            Log.e("Registro", "Mensaje: Error al guardar el registro:", e);
         }
     }
 

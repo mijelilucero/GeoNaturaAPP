@@ -138,7 +138,6 @@ public class CaracteristicasEntornoDao {
             database.close();
         }
 
-        Log.d("FloraService", "Mijeli: Número de floras encontradas: " + caracteristicaEntornoList.size());
         return caracteristicaEntornoList;
     }
 

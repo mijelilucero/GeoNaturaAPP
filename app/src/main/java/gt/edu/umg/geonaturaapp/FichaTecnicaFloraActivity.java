@@ -86,7 +86,7 @@ public class FichaTecnicaFloraActivity extends AppCompatActivity {
                 try {
                     double altura = Double.parseDouble(txtAltura.getText().toString());
 
-                    Log.d("Registro", "Mijeli: sacando datos de sharedpreferences");
+                    Log.d("Registro", "Mensaje: sacando datos de sharedpreferences");
                     SharedPreferences sharedPreferences = getSharedPreferences("MiAppPreferences", MODE_PRIVATE);
                     float latitudFloat = sharedPreferences.getFloat("latitud", 0.00f);
                     float longitudFloat = sharedPreferences.getFloat("longitud", 0.00f);
@@ -94,13 +94,11 @@ public class FichaTecnicaFloraActivity extends AppCompatActivity {
                     double latitud = (double) latitudFloat;
                     double longitud = (double) longitudFloat;
 
-                    Log.d("Registro", "Mijeli: latitud y longitud: "+latitud+longitud);
-
                     int idUsuario = sharedPreferences.getInt("idUsuario", -1);
 
-                    Log.d("Registro", "Mijeli: Latitud:"+latitud);
-                    Log.d("Registro", "Mijeli: Longitud:"+longitud);
-                    Log.d("Registro", "Mijeli: IdUser:"+idUsuario);
+                    Log.d("Registro", "Mensaje: Latitud:"+latitud);
+                    Log.d("Registro", "Mensaje:Longitud:"+longitud);
+                    Log.d("Registro", "Mensaje: IdUser:"+idUsuario);
 
                     String imagenBase64 = sharedPreferences.getString("imagen_key", null);
                     byte[] imagenBytes = null;
@@ -108,16 +106,16 @@ public class FichaTecnicaFloraActivity extends AppCompatActivity {
                     if (imagenBase64 != null) {
                         try {
                             imagenBytes = Base64.decode(imagenBase64, Base64.DEFAULT);
-                            Log.d("Registro", "Mijeli: Imagen decodificada correctamente, longitud de bytes: " + imagenBytes.length);
+                            Log.d("Registro", "Mensaje:Imagen decodificada correctamente, longitud de bytes: " + imagenBytes.length);
                         } catch (IllegalArgumentException e) {
-                            Log.e("Registro", "Mijeli:Error al decodificar la imagen Base64: " + e.getMessage());
+                            Log.e("Registro", "Mensaje: Error al decodificar la imagen Base64: " + e.getMessage());
                         }
                     } else {
-                        Log.w("Registro", "Mijeli: No se encontró imagen en SharedPreferences.");
+                        Log.w("Registro", "Mensaje: No se encontró imagen en SharedPreferences.");
                     }
 
                     String fechaHora = obtenerFechaHoraActual();
-                    Log.d("Registro", "Mijeli: fecha y hora: "+fechaHora);
+                    Log.d("Registro", "Mensaje: fecha y hora: "+fechaHora);
 
                     Flora floraDatos = new Flora();
                     floraDatos.setNombreComun(txtNombreComun.getText().toString());
@@ -152,11 +150,11 @@ public class FichaTecnicaFloraActivity extends AppCompatActivity {
 
     private void guardarregistroFlora(Flora flora) {
         FloraService floraService = new FloraService(this);
-        Log.d("Registro", "Mijeli: Intentando guardar el registro...");
+        Log.d("Registro", "Mensaje: Intentando guardar el registro...");
 
         try {
             floraService.addFlora(flora);
-            Log.d("Registro", "Mijeli: Registro guardado en la base de datos");
+            Log.d("Registro", "Mensaje: Registro guardado en la base de datos");
 
             Toast.makeText(this, "Registro guardado exitosamente...", Toast.LENGTH_SHORT).show();
 
@@ -169,10 +167,9 @@ public class FichaTecnicaFloraActivity extends AppCompatActivity {
 
             Intent intent = new Intent(this, MenuPrincipalActivity.class);
             startActivity(intent);
-            Log.d("Registro", "Mijeli: Cambio de actividad a MenuPrincipalActivity");
         } catch (Exception e) {
             Toast.makeText(this, "Error al guardar el registro: " + e.getMessage(), Toast.LENGTH_LONG).show();
-            Log.e("Registro", "Mijeli: Error al guardar el registro:", e);
+            Log.e("Registro", "Mensaje: Error al guardar el registro:", e);
         }
     }
 

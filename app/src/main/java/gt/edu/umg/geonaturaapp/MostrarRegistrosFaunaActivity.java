@@ -48,7 +48,7 @@ public class MostrarRegistrosFaunaActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("MiAppPreferences", MODE_PRIVATE);
         int idUsuario = sharedPreferences.getInt("idUsuario", -1);
 
-        Log.d("Registro", "Mijeli: id usuario actual: " + idUsuario);
+        Log.d("Registro", "Mensaje: id usuario actual: " + idUsuario);
 
         ListaFaunaAdapter adapterFauna = new ListaFaunaAdapter(faunaService.getAllFaunas(idUsuario));
 
